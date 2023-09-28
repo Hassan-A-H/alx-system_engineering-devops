@@ -35,7 +35,7 @@ and hidden files (starting with .)*
 **ls -la . .. /boot**
 *a script that lists all files (even ones with names beginning with a period character, which are normally hidden) in the current directory and the parent of the working directory and the /boot directory (in this order), in long format.*
 
-**type iamafile /tmp**
+**type /tmp/iamafile**
 *a script that prints the type of the file named iamafile. The file iamafile will be in the /tmp directory.*
 
 **ln -s /bin/ls __ls__**
