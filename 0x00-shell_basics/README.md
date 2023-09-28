@@ -12,3 +12,7 @@
 
 **ls -la**
 *a script that display current directory contents, including hidden files (starting with .). Use the long format. *
+
+**ls -lna**
+*Display current directory contents in Long format, user and group IDs displayed numerically
+and hidden files (starting with .)*
