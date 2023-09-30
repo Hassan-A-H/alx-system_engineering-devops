@@ -38,3 +38,6 @@
 
 * **find . -type d -exec chmod a+x {} +**
 *Create a script that adds execute permission to all subdirectories of the current directory for the owner, the group owner and all other users. Regular files should not be changed.*
+
+* **mkdir --mode=751 my_dir**
+*a script that creates a directory called my_dir with permissions 751 in the working directory.*
