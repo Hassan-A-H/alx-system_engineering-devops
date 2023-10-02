@@ -46,3 +46,6 @@
 * **grep bin /etc/passwd**
 *a script that display the number of lines that contain the pattern “bin” in the file /etc/passwd*
 
+* **grep -A 3 root /etc/passwd**
+*a script that display lines containing the pattern “root” and 3 lines after them in the file /etc/passwd.*
+
