@@ -40,3 +40,9 @@
 * **printf "%.2f\n" $NUM**
 * a script that prints a number with two decimal places, followed by a new line.*
 
+* **echo $((16#$DECIMAL))**
+*a script that converts a number from base 10 to base 16.*
+
+* **printf "%X\n" $DECIMAL**
+*a script that converts a number from base 10 to base 16.*
+
