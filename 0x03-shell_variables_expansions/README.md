@@ -10,3 +10,6 @@
 * **echo $PATH | tr ':' '\n' | grep -v '^$' | wc -l**
 *a script that counts the number of directories in the PATH.*
 
+* **printenv**
+*a script that lists environment variables.*
+
