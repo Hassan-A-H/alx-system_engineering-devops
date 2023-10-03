@@ -55,3 +55,6 @@
 * **grep '^[[:alpha:]]' /etc/ssh/sshd_config**
 *a script that display all lines of the file /etc/ssh/sshd_config starting with a letter.*
 
+* **tr "A","c" "Z","e"**
+*a script that replace all characters A and c from input to Z and e respectively.*
+
