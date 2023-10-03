@@ -70,3 +70,5 @@
 * **find . -empty -printf %f'\n'**
 *Write a command that finds all empty files and directories in the current directory and all sub-directories.*
 
+* **find . -type f -name \*.gif -printf "%f\n" | LC_ALL=C sort -f | rev | cut -b 5- | rev**
+*Write a script that lists all the files with a .gif extension in the current directory and all its sub-directories.*
