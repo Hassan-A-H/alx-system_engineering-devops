@@ -76,3 +76,5 @@
 * **cut -c1 - | paste -sd ""**
 *n acrostic is a poem (or other form of writing) in which the first letter (or syllable, or word) of each line (or paragraph, or other recurring feature in the text) spells out a word, message or the alphabet. The word comes from the French acrostiche from post-classical Latin acrostichis). As a form of constrained writing, an acrostic can be used as a mnemonic device to aid memory retrieval*
 
+* **tail -n +2 | cut -f1 | sort | uniq -c | sort -rn | head -n+11 | cut -b 9-**
+*Write a script that parses web servers logs in TSV format as input and displays the 11 hosts or IP addresses which did the most requests.Order by number of requests, most active host or IP at the top*
