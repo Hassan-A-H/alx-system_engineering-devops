@@ -46,3 +46,6 @@
 * **printf "%X\n" $DECIMAL**
 *a script that converts a number from base 10 to base 16.*
 
+* **tr 'A-Za-z' 'N-ZA-Mn-za-m'**
+*a script that encodes and decodes text using the rot13 encryption. Assume ASCII.*
+
