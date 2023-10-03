@@ -58,3 +58,6 @@
 * **tr 'Ac' 'Ze'**
 *a script that replace all characters A and c from input to Z and e respectively.*
 
+* **tr -d 'Cc'**
+*a script that removes all letters c and C from input.*
+
