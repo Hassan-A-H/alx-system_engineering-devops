@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+
+for i in $(ls /etc/init.d | less)
+do
+    file /proc/1/"$i"
+done
