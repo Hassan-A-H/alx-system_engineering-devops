@@ -274,5 +274,5 @@ vagrant@ubuntu:~$
 **Repo:**
 
 -   GitHub repository: `alx-system_engineering-devops`
--   Directory: `0x0B-ssh`
--   File: `100-puppet_ssh_config.pp`
+-   Directory: `0x0B-ssh`
+-   File: `100-puppet_ssh_config.pp`
