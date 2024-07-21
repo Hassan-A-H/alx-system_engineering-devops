@@ -1,19 +1,39 @@
 #!/usr/bin/env bash
-# Usage: ./1-world_wide_web <domain> <subdomain>
+# Usage: ./1-world_wide_web <domain> [<subdomain>]
 # Display information about subdomains.
 
 domain_information () {
-    line=$(dig "$2"."$1" | grep -A1 'ANSWER SECTION:' | tr '\t' '\n' | tail -2 | tr '\n' ' ')
-    echo "$2 $line" | awk '{print "The subdomain " $1 " is a " $2 " record and points to " $3}'
+    local domain=$1
+    local subdomain=$2
+    local full_domain="${subdomain}.${domain}"
+
+    # Get the DNS record information using dig
+    record=$(dig +short "$full_domain")
+
+    # Determine the record type (A, CNAME, etc.)
+    if [[ -n $record ]]; then
+        if [[ $record =~ ^[0-9]+\.[0-9]+\.[0-9]+\.[0-9]+$ ]]; then
+            record_type="A"
+        else
+            record_type="CNAME"
+        fi
+        echo "The subdomain $subdomain is a $record_type record and points to $record"
+    else
+        echo "The subdomain $subdomain does not have a valid DNS record."
+    fi
 }
 
-if [ "$#" == 1 ]
-then
-  domain_information "$1" "www"
-  domain_information "$1" "lb-01"
-  domain_information "$1" "web-01"
-  domain_information "$1" "web-02"
-elif [ "$#" == 2 ]
-then
-  domain_information "$1" "$2"
+if [ "$#" -eq 1 ]; then
+    domain="$1"
+    domain_information "$domain" "www"
+    domain_information "$domain" "lb-01"
+    domain_information "$domain" "web-01"
+    domain_information "$domain" "web-02"
+elif [ "$#" -eq 2 ]; then
+    domain="$1"
+    subdomain="$2"
+    domain_information "$domain" "$subdomain"
+else
+    echo "Usage: $0 <domain> [<subdomain>]"
+    exit 1
 fi
